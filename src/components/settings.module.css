@@ -1,0 +1,20 @@
+.settings {
+    /* Settings position to absolute left */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Boxing */
+    width: 300px;
+    height: 100vh;
+    box-sizing: border-box;
+    border-radius: 0 20px 20px 0;
+
+    /* Colors */
+    background-color: white;
+    color: black;
+
+    /* Elements Styling */
+    padding: 10px;
+    line-height: 3em;
+}

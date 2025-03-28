@@ -1,0 +1,49 @@
+.home_screen {
+    /* Positioning */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock {
+    font-size: 48px;
+    margin: 1rem 0;
+}
+
+.search {
+    /* Box Sizing */
+    width: 100%;
+    padding: 0.5em;
+
+    /* Coloring */
+    background-color: transparent;
+    color: white;
+
+    /* Text */
+    text-align: center;
+
+    /* Border */
+    border: 0;
+    border-bottom: 2px solid white;
+
+    /* Transition */
+    transition: border-color 0.5s;
+}
+
+.search:focus {
+    outline: 0;
+    border-color: transparent;
+}
+
+.search::placeholder {
+    text-align: center;
+    color: white;
+
+    /* Transition */
+    transition: color 0.5s;
+}
+
+.search:focus::placeholder {
+    color: transparent;
+}
