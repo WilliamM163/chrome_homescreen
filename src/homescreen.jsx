@@ -9,7 +9,7 @@ function HomeScreen({enableSettings}) {
     return (
         <>
             <SettingsButton />
-            {enableSettings ? <Settings /> : <></>}
+            <Settings />
             <div className={styles.home_screen}>
                 <Clock />
                 <Search />

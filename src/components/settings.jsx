@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 
 import close from '../assets/close.svg'
 import styles from './settings.module.css'
@@ -7,12 +7,18 @@ import SelectFonts from "./select_fonts.jsx";
 
 function Settings() {
     const navigate = useNavigate()
+    const location = useLocation()
+
     const onClose = () => {
         navigate('/')
     }
 
+    const showSettings = {
+        left: location.pathname === '/settings' ? '0' : '-300px'
+    }
+
     return (
-        <div className={styles.settings}>
+        <div className={styles.settings} style={showSettings}>
             <div className={styles.title_bar}>
                 <h1>Settings</h1>
                 <img src={close} onClick={onClose} alt="close button" />

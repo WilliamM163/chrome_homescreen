@@ -1,3 +1,8 @@
+* {
+    font-family: 'Ubuntu Mono', monospace;
+    box-sizing: border-box;
+}
+
 body {
     background-color: black;
     color: white;
