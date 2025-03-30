@@ -24,6 +24,10 @@
     justify-content: space-between;
 }
 
+.title_bar img {
+    cursor: pointer;
+}
+
 .title_bar h1 {
     margin: 0;
 }
@@ -37,26 +41,14 @@
     padding: 10px;
 }
 
-.upload_background_wrapper {
-    position: relative;
-    width: 100%;
-    height: 50px;
 
-}
-
-.upload_background_wrapper input[type=file] {
+.select_file_hidden {
+    /* The default selector */
     visibility: hidden;
+    display: none;
 }
 
-.upload_background_wrapper span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: slategrey;
-    color: black;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
+.select_file_button {
+    /* The changed selector */
+    padding: 10px;
 }

@@ -9,10 +9,10 @@ function ChangeBackground() {
     }
 
     return (
-        <div className={styles.upload_background_wrapper}>
-            <input type="file" accept="image/png image/jpeg" ref={button} />
-            <span onClick={onClick}>Change Background</span>
-        </div>
+        <>
+            <input type="file" accept="image/png image/jpeg" ref={button} className={styles.select_file_hidden} />
+            <button onClick={onClick} className={styles.select_file_button}>Change Background</button>
+        </>
     )
 }
 

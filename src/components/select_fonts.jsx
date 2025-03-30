@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import styles from './settings.module.css'
 
 function SelectFonts() {
+    const [permission, setPermission] = useState(false);
     const [fonts, setFonts] = useState([])
 
     const addFontsToList = () => {
@@ -18,17 +19,21 @@ function SelectFonts() {
     //     We need to add selectedFont to local storage, then update the UI
     }
 
-    useEffect(() => {
+    const getPermission = () => {
         window.queryLocalFonts().then(
             (value) => {
                 setFonts(value)
+                setPermission(true)
             },
             (error) => {
                 console.error(error)
             }
         )
-    }, [])
+    }
 
+    if (!permission) {
+        return <button onClick={getPermission} className={styles.font_picker}>Access Fonts Permission</button>
+    }
     return (
         <select name="fonts" id="fonts" className={styles.font_picker} onChange={onChange} >
             {addFontsToList()}
