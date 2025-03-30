@@ -27,6 +27,7 @@ For more customization users can fork the repo and edit the code.
 ![Current Screenshot](./public/current%20screenshot.png)
 
 ## Still todo
+- [x] Select Font
+- [ ] Save and Update Font Style
 - [ ] Change Background
-- [ ] Change Font
 - [ ] Change Search Box and Clock Transparency
