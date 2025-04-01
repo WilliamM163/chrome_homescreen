@@ -9,6 +9,7 @@ For more customization users can fork the repo and edit the code.
 
 ## Technologies Used
 -   ReactJS
+-   localStorage API
 
 ## Installation
 1.  **Clone the repository**
@@ -28,6 +29,7 @@ For more customization users can fork the repo and edit the code.
 
 ## Still todo
 - [x] Select Font
-- [ ] Save and Update Font Style
-- [ ] Change Background
+- [x] Save and Update Font Style
+- [x] Change Background
+- [ ] Alter special character for url search parameters
 - [ ] Change Search Box and Clock Transparency

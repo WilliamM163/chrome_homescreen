@@ -17,6 +17,9 @@
     /* Elements Styling */
     padding: 15px;
     line-height: 3em;
+
+    /* Z-Index */
+    z-index: 1;
 }
 
 .title_bar {
@@ -39,6 +42,8 @@
 
 .font_picker {
     padding: 10px;
+
+    font-family: inherit;
 }
 
 
@@ -51,4 +56,7 @@
 .select_file_button {
     /* The changed selector */
     padding: 10px;
+
+    /* Font */
+    font-family: inherit;
 }

@@ -5,7 +5,21 @@
     top: 50%;
     transform: translate(-50%, -50%);
 
-    width: fit-content;
+    width: 500px;
+}
+
+.background_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    width: 100vw;
+    height: 100vh;
+
+    object-fit: cover;
+
+    z-index: -1;
 }
 
 .settings_button {
@@ -18,7 +32,6 @@
 }
 
 .clock {
-    min-width: 6.25em;
     margin: 1rem 0;
 
     /* Text */
@@ -37,6 +50,7 @@
 
     /* Text */
     text-align: center;
+    font-family: inherit;
     font-size: 1.25rem;
 
     /* Border */
@@ -58,6 +72,8 @@
 
     /* Transition */
     transition: color 0.25s;
+
+    font-family: inherit;
 }
 
 .search:focus::placeholder {

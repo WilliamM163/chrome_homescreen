@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 import styles from './settings.module.css'
 
-function SelectFonts() {
+function SelectFonts({setFont}) {
     const [permission, setPermission] = useState(false);
     const [fonts, setFonts] = useState([])
 
@@ -14,9 +14,14 @@ function SelectFonts() {
 
     const onChange = (event) => {
         const fontIndex = event.target.value
-        console.log('fontIndex:', fontIndex, '\nfont:', fonts[fontIndex].family)
 
-    //     We need to add selectedFont to local storage, then update the UI
+    //     Adding Selected Font to localStorage then updating UI
+        const font = {
+            'fontFamily': fonts[fontIndex].family,
+            'fontStyle': fonts[fontIndex].style
+        }
+        localStorage.setItem('font', JSON.stringify(font));
+        setFont(font);
     }
 
     const getPermission = () => {
