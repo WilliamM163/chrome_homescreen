@@ -31,5 +31,5 @@ For more customization users can fork the repo and edit the code.
 - [x] Select Font
 - [x] Save and Update Font Style
 - [x] Change Background
-- [ ] Alter special character for url search parameters
+- [x] Alter special character for url search parameters
 - [ ] Change Search Box and Clock Transparency

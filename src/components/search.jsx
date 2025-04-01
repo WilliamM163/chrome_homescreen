@@ -3,7 +3,8 @@ import styles from '../home.module.css'
 function Search() {
     const onKeyDown = (event) => {
         if (event.key === 'Enter') {
-            const search_query = event.target.value
+            const user_input = event.target.value
+            const search_query = encodeURIComponent(user_input)
             window.location.replace(`https://www.google.com/search?q=${search_query}`)
         }
     }
