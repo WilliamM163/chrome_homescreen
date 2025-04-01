@@ -14,7 +14,7 @@ function Search() {
         id="search"
         name="search"
         className={styles.search}
-        placeholder="Seach Google"
+        placeholder="Search Google"
         onKeyDown={onKeyDown}
     ></input>
 }
