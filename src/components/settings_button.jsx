@@ -1,13 +1,9 @@
-import { useNavigate } from "react-router"
-
 import icon from '../assets/settings.svg'
 import styles from '../home.module.css'
 
-function SettingsButton() {
-    const navigate = useNavigate()
-
+function SettingsButton({setOpenSettings}) {
     const onClick = () => {
-        navigate('/settings')
+        setOpenSettings(true)
     }
 
     return (

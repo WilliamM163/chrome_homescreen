@@ -9,6 +9,7 @@ import SettingsButton from "./components/settings_button.jsx";
 import {fetchImage} from "./db.js";
 
 function HomeScreen() {
+    const [open, setOpen] = useState(false);
     const [font, setFont] = useState(null)
     const [backgroundURL, setBackgroundURL] = useState(null);
 
@@ -35,9 +36,9 @@ function HomeScreen() {
 
     return (
         <div style={applyStyling()}>
-            <SettingsButton />
+            <SettingsButton setOpenSettings={setOpen} />
             {backgroundURL ? <img src={backgroundURL} className={styles.background_image}/> : <></>}
-            <Settings setFont={setFont} setBackgroundURL={setBackgroundURL} />
+            <Settings setFont={setFont} setBackgroundURL={setBackgroundURL} open={open} setOpen={setOpen} />
             <div className={styles.home_screen}>
                 <Clock />
                 <Search />

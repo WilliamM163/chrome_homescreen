@@ -1,20 +1,15 @@
-import { useNavigate, useLocation } from "react-router";
-
 import close from '../assets/close.svg'
 import styles from './settings.module.css'
 import ChangeBackground from "./change_background.jsx";
 import SelectFonts from "./select_fonts.jsx";
 
-function Settings({setFont, setBackgroundURL}) {
-    const navigate = useNavigate()
-    const location = useLocation()
-
+function Settings({setFont, setBackgroundURL, open, setOpen}) {
     const onClose = () => {
-        navigate('/')
+        setOpen(false)
     }
 
     const showSettings = {
-        left: location.pathname === '/settings' ? '0' : '-300px'
+        left: open ? '0' : '-300px'
     }
 
     return (

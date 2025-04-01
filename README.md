@@ -24,6 +24,29 @@ For more customization users can fork the repo and edit the code.
     npm run dev
     ```
 
+## Installation as a Chrome Extension
+
+1.  **Build the Extension:**
+    ```bash
+    npm run build
+    ```
+    This command compiles the extension's source code and places the output in the `dist` folder.
+
+2.  **Open Chrome Extensions Page:**
+    * Open Google Chrome.
+    * In the address bar, type `chrome://extensions/` and press Enter.
+
+3.  **Enable Developer Mode:**
+    * In the top right corner of the Extensions page, toggle the "Developer mode" switch to the "on" position.
+
+4.  **Load Unpacked Extension:**
+    * Click the "Load unpacked" button.
+    * Navigate to your project directory.
+    * Select the `dist` folder and click "Select Folder" (or "Open").
+
+5.  **Verify Installation:**
+    * When you open a new tab you should be greeted by an option to keep extension as the prefered option for new tabs
+
 ## Current Status
 ![Current Screenshot](./public/current%20screenshot.png)
 
