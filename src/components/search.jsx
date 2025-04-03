@@ -15,6 +15,7 @@ function Search() {
         name="search"
         className={styles.search}
         placeholder="Search Google"
+        autoComplete="off"
         onKeyDown={onKeyDown}
     ></input>
 }
