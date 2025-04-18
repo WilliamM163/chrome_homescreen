@@ -48,7 +48,7 @@ For more customization users can fork the repo and edit the code.
     * Select the `dist` folder and click "Select Folder" (or "Open").
 
 5.  **Verify Installation:**
-    * When you open a new tab you should be greeted by an option to keep extension as the prefered option for new tabs
+    * When you open a new tab you should be greeted by an option to keep extension as the preferred option for new tabs
 
 ## Current Status
 ![Current Screenshot](./current_screenshot.png)
@@ -58,4 +58,4 @@ For more customization users can fork the repo and edit the code.
 - [x] Save and Update Font Style
 - [x] Change Background
 - [x] Alter special character for url search parameters
-- [ ] Save to Local Storage
+- [x] Save to Local Storage

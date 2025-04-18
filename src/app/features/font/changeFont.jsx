@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { setFont } from './fontSlice';
 
 import styles from './changeFont.module.css'
+import { saveFont } from './changeFontFunctions';
 
 
 function ChangeFont() {
@@ -25,6 +26,7 @@ function ChangeFont() {
             'fontFamily': fonts[fontIndex].family,
             'fontStyle': fonts[fontIndex].style
         }
+        saveFont(font) // Saving font to localStorage
         dispatch(setFont(font))        
     }
 
