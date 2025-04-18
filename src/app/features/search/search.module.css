@@ -1,0 +1,40 @@
+.search {
+    /* Box Sizing */
+    width: 100%;
+    padding: 0.5em;
+
+    /* Coloring */
+    background-color: transparent;
+    color: white;
+
+    /* Text */
+    text-align: center;
+    font-family: inherit;
+    font-size: 1.25rem;
+
+    /* Border */
+    border: 0;
+    border-bottom: 2px solid white;
+
+    /* Transition */
+    transition: border-color 0.25s;
+}
+
+.search:focus {
+    outline: 0;
+    border-color: transparent;
+}
+
+.search::placeholder {
+    text-align: center;
+    color: white;
+
+    /* Transition */
+    transition: color 0.25s;
+
+    font-family: inherit;
+}
+
+.search:focus::placeholder {
+    color: transparent;
+}

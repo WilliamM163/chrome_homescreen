@@ -1,0 +1,55 @@
+.settings {
+    /* Settings position to absolute left */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.25s ease;
+
+    /* Boxing */
+    width: 300px;
+    height: 100vh;
+    border-radius: 0 20px 20px 0;
+
+    /* Colors */
+    background-color: white;
+    color: black;
+
+    /* Elements Styling */
+    padding: 15px;
+    line-height: 3em;
+
+    /* Z-Index */
+    z-index: 1;
+}
+
+.title_bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.title_bar h1 {
+    margin: 0;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.options h2 {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.settings_button {
+    /* Positioning */
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    cursor: pointer;
+}

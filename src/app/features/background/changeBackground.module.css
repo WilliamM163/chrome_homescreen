@@ -1,0 +1,13 @@
+.select_file_button {
+    /* The changed selector */
+    padding: 10px;
+
+    /* Font */
+    font-family: inherit;
+}
+
+.select_file_hidden {
+    /* The default selector */
+    visibility: hidden;
+    display: none;
+}

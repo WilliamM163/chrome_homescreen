@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Custom Homescreen",
+  "short_name": "New Tab",
+  "version": "1.0.0",
+  "description": "A beautiful homescreen with simple customisation.",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  }
+}
