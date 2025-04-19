@@ -5,7 +5,8 @@ function saveTasks(tasks) {
 
 function fetchTasks() {
     const tasksJSON = localStorage.getItem('tasks')
-    return JSON.parse(tasksJSON)
+    const tasks = JSON.parse(tasksJSON)
+    return tasks ? tasks : []
 }
 
 export { saveTasks, fetchTasks }

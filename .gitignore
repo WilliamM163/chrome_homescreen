@@ -9,6 +9,7 @@
 /docs/.vitepress/cache
 /packages/vite/LICENSE
 dist
+dist/*
 dist-ssr
 explorations
 node_modules

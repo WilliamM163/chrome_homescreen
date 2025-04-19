@@ -45,6 +45,15 @@
 }
 
 /* ADDING TASKS */
+.container .addTaskInput {
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.container:hover .addTaskInput {
+    opacity: 1;
+}
+
 .addTaskInput {
     /* Coloring */
     background-color: transparent;
