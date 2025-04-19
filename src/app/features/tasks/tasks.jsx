@@ -7,9 +7,9 @@ function Tasks() {
     console.log(tasks)
 
     return (
-        <>
-        <h1>Tasks</h1>
-        </>
+        <div className={styles.tasks}>
+            <h1>Tasks</h1>
+        </div>
     )
 }
 
