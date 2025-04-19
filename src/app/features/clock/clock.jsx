@@ -6,6 +6,7 @@ import styles from './clock.module.css'
 function Clock() {
     const [time, setTime] = useState(new Date())
     const clockSettings = useSelector((state) => state.clock)
+    const { showsSeconds, is24Hour, font } = clockSettings;
 
     useEffect(() => {
         setTimeout(() => {
@@ -13,20 +14,27 @@ function Clock() {
         }, 1000)
     }, [time])
 
-    let hours;
-    if (clockSettings.is24Hour) {
-        hours = String(time.getHours()).padStart(2, '0')
-    } else {
-        hours = String(time.getHours() % 12).padStart(2, '0')
-    }
-    const minutes = String(time.getMinutes()).padStart(2, '0')
-    const seconds = String(time.getSeconds()).padStart(2, '0')
+    const formatTime = () => {
+        const hours = time.getHours();
+        const minutes = String(time.getMinutes()).padStart(2, '0');
+        const seconds = String(time.getSeconds()).padStart(2, '0');
 
-    if (clockSettings.showsSeconds) {
-        return <p className={styles.clock} style={clockSettings.font}>{hours} : {minutes} : {seconds}</p>
-    } else {
-        return <p className={styles.clock} style={clockSettings.font}>{hours} : {minutes}</p>
-    }
+        if (showsSeconds && is24Hour) {
+            return `${String(hours).padStart(2, '0')} : ${minutes} : ${seconds}`;
+        } else if (showsSeconds && !is24Hour) {
+            const hour12 = hours % 12 === 0 ? 12 : hours % 12;
+            const period = hours < 12 ? 'AM' : 'PM';
+            return `${String(hour12).padStart(2, '0')} : ${minutes} : ${seconds} ${period}`;
+        } else if (!showsSeconds && is24Hour) {
+            return `${String(hours).padStart(2, '0')} : ${minutes}`;
+        } else { // (!showsSeconds && !is24Hour)
+            const hour12 = hours % 12 === 0 ? 12 : hours % 12;
+            const period = hours < 12 ? 'AM' : 'PM';
+            return `${String(hour12).padStart(2, '0')} : ${minutes} ${period}`;
+        }
+    };
+
+    return <p className={styles.clock} style={font}>{formatTime()}</p>
 }
 
 export default Clock

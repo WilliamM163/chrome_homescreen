@@ -2,14 +2,11 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const tasksSlice = createSlice({
     name: 'tasks',
-    initialState: [
-        {
-            id: '',
-            string: 'Put out the washing',
-            completed: false
-        }
-    ],
+    initialState: [],
     reducers: {
+        loadTasks(state, action) {
+            return action.payload
+        },
         addTask(state, action) {
             state.push(action.payload)
         },
@@ -18,8 +15,8 @@ const tasksSlice = createSlice({
             state[i].completed = !state[i].completed
         },
         removeTask(state, action) {
-            state = state.filter(task => {
-                return task.id !== action.payload.id
+            return state.filter((_, index) => {
+                return index !== action.payload
             })
         },
         editTask(state, action) {
@@ -29,5 +26,5 @@ const tasksSlice = createSlice({
     }
 })
 
-export const { addTask, toggleCompletion, removeTask, editTask} = tasksSlice.actions
+export const { loadTasks, addTask, toggleCompletion, removeTask, editTask } = tasksSlice.actions
 export default tasksSlice.reducer

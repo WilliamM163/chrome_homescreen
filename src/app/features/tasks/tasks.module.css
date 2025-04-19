@@ -1,7 +1,75 @@
-.tasks {
+.container {
     height: 100%;
-    padding: 10px;
+    padding: 10px 15px;
     background-color: rgba(255, 255, 255, 0.3);
 
     border-radius: 10px;
+}
+
+/* DISPLAYING TASKS */
+.task {
+    display: flex;
+    height: calc(fit-content + 5px);
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.task img {
+    cursor: pointer;
+}
+
+.container h1 {
+    padding: 0.25em 0;
+}
+
+.task > * {
+    padding-right: 5px;
+}
+
+.task:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.completed {
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+.task:hover > .bin {
+    opacity: 1;
+}
+
+.bin {
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+
+/* ADDING TASKS */
+.addTaskInput {
+    /* Coloring */
+    background-color: transparent;
+    color: white;
+
+    /* Text */
+    font-family: inherit;
+    font-size: 1rem;
+
+    /* Border */
+    border: 0;
+
+    /* Outline */
+    outline: 0;
+}
+
+.addTaskInput::placeholder {
+    color: white;
+
+    /* Transition */
+    transition: color 0.25s;
+
+    font-family: inherit;
+}
+
+.addTaskInput:focus::placeholder {
+    color: transparent;
 }

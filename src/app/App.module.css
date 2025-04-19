@@ -12,7 +12,7 @@
 .clock_and_search_widget {
     padding: 50px 0;
     min-width: 400px;
-    flex-grow: 2;
+    flex-grow: 100;
 }
 
 .tasks_widget {
