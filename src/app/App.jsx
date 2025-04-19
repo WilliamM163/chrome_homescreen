@@ -6,6 +6,7 @@ import Settings from './features/settings/settings'
 import styles from './App.module.css'
 import OpenSettingsButton from './features/settings/openSettingsButton'
 import { useSelector } from 'react-redux'
+import Tasks from './features/tasks/tasks'
 
 
 function App() {
@@ -16,11 +17,16 @@ function App() {
         <div style={fontStyle}>
             <Background />
             <OpenSettingsButton />
-            <div className={styles.clock_and_search_widget}>
-                <Clock />
-                <Search />
-            </div>
             <Settings />
+            <div className={styles.grid}>
+                <div className={styles.clock_and_search_widget}>
+                    <Clock />
+                    <Search />
+                </div>
+                <div className={styles.tasks_widget}>
+                    <Tasks />
+                </div>
+            </div>
         </div>
     )
 }

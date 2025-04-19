@@ -1,9 +1,22 @@
-.clock_and_search_widget {
-    /* Positioning */
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.grid {
+    height: 100vh;
+    width: 100vw;
 
-    width: 500px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100%;
+
+    align-items: center;
+}
+
+.clock_and_search_widget {
+    width: 100%;
+}
+
+.tasks_widget {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+
+    background-color: rgba(255, 255, 255, 0.3);
 }

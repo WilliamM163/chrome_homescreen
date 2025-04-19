@@ -22,6 +22,10 @@
     z-index: 1;
 }
 
+.settings > * {
+    margin: 4px;
+}
+
 .title_bar {
     display: flex;
     justify-content: space-between;
@@ -42,7 +46,7 @@
 
 .options h2 {
     font-weight: normal;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .settings_button {

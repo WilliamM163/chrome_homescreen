@@ -1,0 +1,10 @@
+.font_picker {
+    padding: 10px;
+    font-family: inherit;
+    display: block;
+    width: 100%;
+}
+
+.clockSettings > label {
+    padding-left: 4px;
+}

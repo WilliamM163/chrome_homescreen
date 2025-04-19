@@ -14,15 +14,10 @@
 
     /* Border */
     border: 0;
-    border-bottom: 2px solid white;
-
-    /* Transition */
-    transition: border-color 0.25s;
 }
 
 .search:focus {
     outline: 0;
-    border-color: transparent;
 }
 
 .search::placeholder {

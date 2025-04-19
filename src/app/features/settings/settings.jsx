@@ -6,6 +6,7 @@ import close from './close_icon.svg'
 import styles from './settings.module.css'
 import ChangeBackground from '../background/changeBackground'
 import ChangeFont from '../font/changeFont'
+import ClockSettings from '../clock/clockSettings'
 
 
 function Settings() {
@@ -33,6 +34,8 @@ function Settings() {
                 <ChangeBackground />
                 <h2>Font Family</h2>
                 <ChangeFont />
+                <h2>Clock Settings</h2>
+                <ClockSettings />
             </div>
         </div>
     )
