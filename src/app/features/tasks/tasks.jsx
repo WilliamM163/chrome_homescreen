@@ -48,6 +48,10 @@ function Tasks() {
     }
 
     const renderTasks = () => {
+        if (tasks.length === 0) {
+            return <p>No Tasks</p>
+        }
+
         return tasks.map((task, index) => {
             return (
                 <div className={styles.task} key={task.id} >
