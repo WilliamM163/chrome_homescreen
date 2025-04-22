@@ -1,61 +1,83 @@
 # Chrome Homescreen V2
-A fully customizable homescreen for Google Chrome
+Chrome Homescreen V2 is a Chrome extension designed to transform your new tab page into a study hub! It is highly customizable, and it helps you stay focused and motivated by displaying essential study tools and a fun interactive pet feature.
 
-## Description
-Chrome Homescreen is a project aimed at providing users with a completely personalized homescreen experience within
-their web browser. It allows for basic customization, enabling users to tailor their start page to their specific
-needs and preferences.  
-This is a rewrite of Chrome Homescreen V1.
-This rewrite adds redux for more unified state management, and a focus on code readibility.  
-For more customization users can fork the repo and edit the code.
+This project is a work in progress. My aim for this is to gain more technical experience working with front-end technologies.
 
+## Table of Contents
+1. Key Features
+2. Technologies Used
+3. Installation
+4. Project Structure
+5. Licensing
+
+## Key Features:
+**Features I am working on** | [Todo List](./TODO.md)
+- **To-Do List:** Keep track of your tasks and assignments
+- **Exam Countdown Timer:** Stay aware of upcoming deadlines
+- **Practice Exam Timer:** Practice an exam with time pressure
+- **Pet Section:** A cute virtual pet that gets animated as you complete your tasks, providing positive reinforcement
+- **Customization:** Customize the look and feel of your page, by changing the background, fonts, clock, and widget settings
+- **Notifications:** Receive reminders for important events, like due tasks
 
 ## Technologies Used
--   ReactJS + Redux
--   localStorage API
+- ReactJS + Redux
+- HTML, CSS, JS
+- Browser APIS (Chrome Extension APIs, Notifications API, localStorage, indexedDB)
+- Figma (for Design)
+- Github (for version control)
 
 ## Installation
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/WilliamM163/chrome_homescreen
-    cd chrome_homescreen
-    ```
+Node.js and npm are required. If you don't have them installed, you can download them from [nodejs.org](https://nodejs.org/en/download)
 
-2. **Installing Dependencies**
+1) Clone the repo:
+   ```bash
+   git clone https://github.com/WilliamM163/chrome_homescreen
+   ```
+2) Install Dependencies
     ```bash
+    cd chrome_homescreen
     npm install
+    ```
+3) Run Dev Mode
+    ```bash
     npm run dev
     ```
+4) Install as a chrome extension
+   1) Compile React App
+        ```bash
+        npm run build
+        ```
+    2) Open Chrome and navigate to `chrome://extensions/`
+    3) Enable "Developer mode" in the top right corner
+    4) Click "Load unpacked" and select the `dist` folder in your project directory
+    5) The Chrome Extension should now be installed
 
-## Installation as a Chrome Extension
+## Project Structure
+```
+├── node_modules/
+├── public/                
+├── src/                        # Contains the main source code for the application
+│   ├── app/                    # Core application logic
+│   │   ├── features/           # Contains modular features of the application
+│   │   │   └── background/     # Example feature: Background functionality
+│   │   │       └── background.jsx
+│   │   │       │   # React component for the background feature
+│   │   │       └── backgroundSlice.js
+│   │   │           # Redux slice for managing background state
+│   │   ├── clock/
+│   │   ├── search/
+│   │   ├── App.jsx             # React component where other components are rendered
+│   │   └── store.js            # Redux store configuration and root reducer
+│   ├── assets/                 
+│   └── main.jsx                # The entry point of the React application
+├── index.css                   # Global styles for the application
+├── index.html                  # The main HTML file that loads the React application
+├── .gitignore       
+├── package.json                # Contains project metadata, scripts, and npm dependencies
+├── README.md                   # Project documentation (this file)
+├── TODO.md                     # List of tasks or things to do
+└── vite.config.js
+```
 
-1.  **Build the Extension:**
-    ```bash
-    npm run build
-    ```
-    This command compiles the extension's source code and places the output in the `dist` folder.
-
-2.  **Open Chrome Extensions Page:**
-    * Open Google Chrome.
-    * In the address bar, type `chrome://extensions/` and press Enter.
-
-3.  **Enable Developer Mode:**
-    * In the top right corner of the Extensions page, toggle the "Developer mode" switch to the "on" position.
-
-4.  **Load Unpacked Extension:**
-    * Click the "Load unpacked" button.
-    * Navigate to your project directory.
-    * Select the `dist` folder and click "Select Folder" (or "Open").
-
-5.  **Verify Installation:**
-    * When you open a new tab you should be greeted by an option to keep extension as the preferred option for new tabs
-
-## Current Status
-![Current Screenshot](./current_screenshot.png)
-
-## Still todo
-- [x] Select Font
-- [x] Save and Update Font Style
-- [x] Change Background
-- [x] Alter special character for url search parameters
-- [x] Save to Local Storage
+## Licensing
+This project is licensed under the terms of the GNU General Public License version 3.0
