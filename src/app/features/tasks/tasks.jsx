@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { toggleCompletion, addTask, removeTask } from './tasksSlice'
+import { toggleCompletion, addTask, removeTask, moveTask } from './tasksSlice'
 
 import styles from './tasks.module.css'
 import completed from './assets/completed.svg'
 import uncompleted from './assets/uncompleted.svg'
+import up from './assets/up.svg'
+import down from './assets/down.svg'
 import bin from './assets/bin.svg'
 import { saveTasks } from './tasksFunctions'
 
@@ -15,14 +17,8 @@ function Tasks() {
 
     // Save tasks when tasks are updated
     useEffect(() => {
-        console.log(tasks)
         saveTasks(tasks)
     }, [tasks])
-
-    // Task Completion
-    const onComplete = (index) => {
-        dispatch(toggleCompletion(index))
-    }
 
     // Adding Task
     const onKeyDown = (event) => {
@@ -47,6 +43,21 @@ function Tasks() {
         dispatch(removeTask(index))
     }
 
+    // Task Completion
+    const onComplete = (index) => {
+        dispatch(toggleCompletion(index))
+    }
+
+    // Move Task
+    const move = (index, direction) => {
+        if (direction === 'UP' && index !== 0) {
+            dispatch(moveTask({oldIndex: index, newIndex: index-1}))
+        } else if (direction === 'DOWN' && index !== tasks.length-1) {
+            dispatch(moveTask({oldIndex: index, newIndex: index+1}))
+        }
+    }
+
+    // Render Tasks
     const renderTasks = () => {
         if (tasks.length === 0) {
             return <p>No Tasks</p>
@@ -58,7 +69,9 @@ function Tasks() {
                     <img src={task.completed ? completed : uncompleted} onClick={() => onComplete(index)} />
                     <p className={task.completed ? styles.completed : null}>{task.string}</p>
                     <div style={{ flexGrow: 1 }}></div>
-                    <img src={bin} className={styles.bin} onClick={() => onDelete(index)} />
+                    <img src={up} className={styles.button} onClick={() => move(index, 'UP')} />
+                    <img src={down} className={styles.button} onClick={() => move(index, 'DOWN')} />
+                    <img src={bin} className={styles.button} onClick={() => onDelete(index)} />
                 </div>
             )
         })

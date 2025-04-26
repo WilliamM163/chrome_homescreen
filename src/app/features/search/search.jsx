@@ -1,5 +1,3 @@
-import styles from './search.module.css'
-
 function Search() {
     const onKeyDown = (event) => {
         if (event.key === 'Enter') {
@@ -13,7 +11,7 @@ function Search() {
         type="text"
         id="search"
         name="search"
-        className={styles.search}
+        className='search'
         placeholder="Search Google"
         autoComplete="off"
         onKeyDown={onKeyDown}

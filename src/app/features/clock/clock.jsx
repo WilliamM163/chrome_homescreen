@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react"
 import { useSelector } from 'react-redux'
 
-import styles from './clock.module.css'
-
 function Clock() {
     const [time, setTime] = useState(new Date())
     const clockSettings = useSelector((state) => state.clock)
@@ -34,7 +32,7 @@ function Clock() {
         }
     };
 
-    return <p className={styles.clock} style={font}>{formatTime()}</p>
+    return <p className='clock' style={font}>{formatTime()}</p>
 }
 
 export default Clock

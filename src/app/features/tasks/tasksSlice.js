@@ -19,6 +19,12 @@ const tasksSlice = createSlice({
                 return index !== action.payload
             })
         },
+        moveTask(state, action) {
+            const { oldIndex, newIndex } = action.payload;
+            const temp = state[newIndex]
+            state[newIndex] = state[oldIndex]
+            state[oldIndex] = temp
+        },
         editTask(state, action) {
             const i = action.payload.index
             state[i] = action.payload.task
@@ -26,5 +32,5 @@ const tasksSlice = createSlice({
     }
 })
 
-export const { loadTasks, addTask, toggleCompletion, removeTask, editTask } = tasksSlice.actions
+export const { loadTasks, addTask, toggleCompletion, removeTask, moveTask, editTask } = tasksSlice.actions
 export default tasksSlice.reducer
