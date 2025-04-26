@@ -3,7 +3,7 @@ function Search() {
         if (event.key === 'Enter') {
             const user_input = event.target.value
             const search_query = encodeURIComponent(user_input)
-            window.location.replace(`https://www.google.com/search?q=${search_query}`)
+            window.open(`https://www.google.com/search?q=${search_query}`, '_self')
         }
     }
 

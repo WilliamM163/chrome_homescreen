@@ -29,26 +29,57 @@ body {
 
 /* ------ HOMESCREEN ------ */
 .homescreen {
-    /* Box Sizing */
-    height: 100vh;
-    width: 100vw;
-
-    /* Overflow */
-    overflow: scroll;
-
-    /* Flex */
-    display: flex;
-    flex-wrap: wrap;
-
-    /* Alignment */
-    align-items: center;
-    justify-items: center;
-    justify-content: space-between;
+    padding: 10px;
+}
+@media screen and (min-width: 901px) {
+    .homescreen {
+        /* Box Sizing */
+        height: 100vh;
+        width: 100vw;
+    
+        /* Overflow */
+        overflow: scroll;
+    
+        /* Grid */
+        display: grid;
+        grid-template-columns: 1fr 400px;
+    
+        /* Alignment */
+        align-items: center;
+        justify-items: center;
+    }
+    .task_container {
+        border-radius: 15px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .homescreen {
+        /* Box Sizing */
+        height: 100vh;
+        width: 100vw;
+        padding-bottom: 0;
+        
+        /* Overflow */
+        overflow: scroll;
+    
+        /* Grid */
+        display: grid;
+        grid-template-rows: 300px 1fr;
+    
+        /* Alignment */
+        align-items: center;
+        justify-items: center;
+    }
+    .task_container, .clock_and_search_widget {
+        max-width: 600px;
+    }
+    .task_container {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
 }
 .clock_and_search_widget {
     padding: 50px 0;
-    min-width: 400px;
-    flex-grow: 100;
 }
 .clock {
     margin: 1rem 0;
@@ -75,7 +106,6 @@ body {
     border: 0;
     outline: 0;
 }
-
 .search::placeholder {
     text-align: center;
     color: white;
@@ -85,16 +115,14 @@ body {
 
     font-family: inherit;
 }
-
 .search:focus::placeholder {
     color: transparent;
 }
-
-.tasks_widget {
+.task_container {
     height: 100%;
-    min-width: 400px;
-    flex-grow: 1;
-    /* padding: 10px; */
+    width: 100%;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 
@@ -153,4 +181,71 @@ body {
     left: 0;
     margin: 20px;
     cursor: pointer;
+}
+
+/* ------ TASKS ------ */
+.task {
+    display: flex;
+    align-items: center;
+}
+.task img {
+    cursor: pointer;
+}
+.task p {
+    height: fit-content;
+    padding-left: 5px;
+
+    max-width: 400px;
+}
+.task:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+.completed {
+    font-style: italic;
+    text-decoration: line-through;
+}
+.button {
+    padding-left: 5px;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+
+.task:hover > .button {
+    opacity: 1;
+}
+
+/* ADDING TASKS */
+.addTaskInput {
+    /* Coloring */
+    background-color: transparent;
+    color: white;
+
+    /* Box Sizing */
+    width: 100%;
+
+    /* Text */
+    font-family: inherit;
+    font-size: 1rem;
+
+    /* Border */
+    border: 0;
+    outline: 0;
+
+    /* Transition */
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.task_container:hover .addTaskInput, .task_container:focus .addTaskInput {
+    opacity: 1;
+}
+.addTaskInput::placeholder {
+    color: white;
+    font-family: inherit;
+
+    /* Transition */
+    transition: color 0.25s;
+}
+.addTaskInput:focus::placeholder {
+    color: transparent;
 }

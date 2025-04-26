@@ -25,7 +25,7 @@
 
 **Low Priority**
 - [ ] Side Panel
-  - [ ] Tasks
+  - [x] Tasks
   - [ ] Exam Countdown
   - [ ] Practice exam timer
   - [ ] Your pet section

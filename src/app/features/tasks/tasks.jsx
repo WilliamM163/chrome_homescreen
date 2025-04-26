@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { toggleCompletion, addTask, removeTask, moveTask } from './tasksSlice'
 
-import styles from './tasks.module.css'
 import completed from './assets/completed.svg'
 import uncompleted from './assets/uncompleted.svg'
 import up from './assets/up.svg'
@@ -65,20 +64,20 @@ function Tasks() {
 
         return tasks.map((task, index) => {
             return (
-                <div className={styles.task} key={task.id} >
+                <div className='task' key={task.id} >
                     <img src={task.completed ? completed : uncompleted} onClick={() => onComplete(index)} />
-                    <p className={task.completed ? styles.completed : null}>{task.string}</p>
+                    <p className={task.completed ? 'completed' : null}>{task.string}</p>
                     <div style={{ flexGrow: 1 }}></div>
-                    <img src={up} className={styles.button} onClick={() => move(index, 'UP')} />
-                    <img src={down} className={styles.button} onClick={() => move(index, 'DOWN')} />
-                    <img src={bin} className={styles.button} onClick={() => onDelete(index)} />
+                    <img src={up} className='button' onClick={() => move(index, 'UP')} />
+                    <img src={down} className='button' onClick={() => move(index, 'DOWN')} />
+                    <img src={bin} className='button' onClick={() => onDelete(index)} />
                 </div>
             )
         })
     }
 
     return (
-        <div className={styles.container}>
+        <div className='task_container'>
             <h1>Tasks</h1>
             <div>
                 {renderTasks()}
@@ -86,7 +85,7 @@ function Tasks() {
             <div style={{display: 'block', height: 5}}></div>
             <input
                 type="text"
-                className={styles.addTaskInput}
+                className='addTaskInput'
                 placeholder="Add a new task..."
                 value={newTaskString}
                 onKeyDown={onKeyDown}
