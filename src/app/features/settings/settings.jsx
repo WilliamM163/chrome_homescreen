@@ -26,7 +26,7 @@ function Settings() {
         <div className='settings' style={showSettings}>
             <div className='title_bar'>
                 <h1>Settings</h1>
-                <img src={close} onClick={onClick} className='close' alt="close button" />
+                <img src={close} onClick={onClick} className='button' alt="close button" />
             </div>
             <div className='options'>
                 <h2>Background</h2>

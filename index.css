@@ -1,3 +1,9 @@
+/* Variables */
+:root {
+    --page-height: 100dvh;
+    --page-width: 100dvw;
+}
+
 /* Default Page Settings */
 * {
     box-sizing: border-box;
@@ -11,11 +17,15 @@ body {
     margin: 0;
 }
 
+.button {
+    cursor: pointer;
+}
+
 /* ------ BACKGROUND ------  */
 .background_image {
     /* Box Sizing */
-    width: 100vw;
-    height: 100vh;
+    width: var(--page-width);
+    height: var(--page-height);
 
     /* Positioning */
     position: absolute;
@@ -31,33 +41,41 @@ body {
 .homescreen {
     padding: 10px;
 }
+.side_panel {
+    /* Box Sizing */
+    height: 100%;
+    width: 100%;
+
+    /* Display Flex */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    /* Overflow */
+    overflow: scroll;
+}
 @media screen and (min-width: 901px) {
     .homescreen {
         /* Box Sizing */
-        height: 100vh;
-        width: 100vw;
-    
-        /* Overflow */
-        overflow: scroll;
+        height: var(--page-height);
+        width: var(--page-width);
     
         /* Grid */
         display: grid;
         grid-template-columns: 1fr 400px;
+        grid-template-rows: 100%;
     
         /* Alignment */
         align-items: center;
         justify-items: center;
     }
-    .task_container {
-        border-radius: 15px;
-    }
 }
 @media screen and (max-width: 900px) {
     .homescreen {
         /* Box Sizing */
-        height: 100vh;
-        width: 100vw;
-        padding-bottom: 0;
+        height: var(--page-height);
+        width: var(--page-width);
+        padding-bottom: 10px;
         
         /* Overflow */
         overflow: scroll;
@@ -70,12 +88,11 @@ body {
         align-items: center;
         justify-items: center;
     }
-    .task_container, .clock_and_search_widget {
-        max-width: 600px;
+    .side_panel {
+        overflow: visible;
     }
-    .task_container {
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+    .side_panel, .clock_and_search_widget {
+        max-width: 600px;
     }
 }
 .clock_and_search_widget {
@@ -118,11 +135,12 @@ body {
 .search:focus::placeholder {
     color: transparent;
 }
-.task_container {
-    height: 100%;
+.widget_container {
+    height: fit-content;
     width: 100%;
     padding: 10px 15px;
     background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
 }
 
 
@@ -156,10 +174,6 @@ body {
     justify-content: space-between;
 }
 
-.close {
-    cursor: pointer;
-}
-
 .title_bar h1 {
     margin: 0;
 }
@@ -187,9 +201,10 @@ body {
 .task {
     display: flex;
     align-items: center;
+    margin: 8px 0;
 }
-.task img {
-    cursor: pointer;
+.widget_container > *, .task > * {
+    margin: 0;
 }
 .task p {
     height: fit-content;
@@ -204,13 +219,12 @@ body {
     font-style: italic;
     text-decoration: line-through;
 }
-.button {
+.task > .fade {
     padding-left: 5px;
     opacity: 0;
     transition: opacity 0.15s;
 }
-
-.task:hover > .button {
+.task:hover > .fade {
     opacity: 1;
 }
 

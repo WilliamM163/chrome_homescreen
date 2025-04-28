@@ -65,19 +65,19 @@ function Tasks() {
         return tasks.map((task, index) => {
             return (
                 <div className='task' key={task.id} >
-                    <img src={task.completed ? completed : uncompleted} onClick={() => onComplete(index)} />
+                    <img src={task.completed ? completed : uncompleted} class='button' onClick={() => onComplete(index)} />
                     <p className={task.completed ? 'completed' : null}>{task.string}</p>
                     <div style={{ flexGrow: 1 }}></div>
-                    <img src={up} className='button' onClick={() => move(index, 'UP')} />
-                    <img src={down} className='button' onClick={() => move(index, 'DOWN')} />
-                    <img src={bin} className='button' onClick={() => onDelete(index)} />
+                    <img src={up} className='button fade' onClick={() => move(index, 'UP')} />
+                    <img src={down} className='button fade' onClick={() => move(index, 'DOWN')} />
+                    <img src={bin} className='button fade' onClick={() => onDelete(index)} />
                 </div>
             )
         })
     }
 
     return (
-        <div className='task_container'>
+        <div className='widget_container'>
             <h1>Tasks</h1>
             <div>
                 {renderTasks()}
