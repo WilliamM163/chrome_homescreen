@@ -6,8 +6,6 @@ import Settings from './features/settings/settings'
 import OpenSettingsButton from './features/settings/openSettingsButton'
 import { useSelector } from 'react-redux'
 import Tasks from './features/tasks/tasks'
-import Timer from './features/timer/Timer'
-import Countdown from './features/countdown/Countdown'
 import Pets from './features/pets/pets'
 
 
@@ -27,9 +25,7 @@ function App() {
                 </div>
                 <div className='side_panel'>
                     <Tasks />
-                    <Countdown />
-                    <Timer />
-                    <Pets />
+                    {/* <Pets /> */}
                 </div>
             </div>
         </div>

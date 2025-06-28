@@ -27,9 +27,8 @@
 **Low Priority**
 - [ ] Side Panel
   - [x] Tasks
-  - [ ] Exam Countdown        `WORKING ON`
-  - [ ] Practice exam timer   `WORKING ON`
   - [ ] Your pet section      `WORKING ON`
+  - [ ] Your day preview      `WORKING ON`
 
 ## Generic
 - [ ] Reference GPL License Properly
