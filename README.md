@@ -1,5 +1,5 @@
-# Chrome Homescreen V2
-Chrome Homescreen V2 is a Chrome extension designed to transform your new tab page into a study hub! It is highly customizable, and it helps you stay focused and motivated by displaying essential study tools and a fun interactive pet feature.
+# Dash Page
+Dash Page is a Chrome extension designed to transform your new tab page into a study hub! It is highly customizable, and it helps you stay focused and motivated by displaying essential study tools and a fun interactive pet feature.
 
 This project is a work in progress. My aim for this is to gain more technical experience working with front-end technologies.
 
