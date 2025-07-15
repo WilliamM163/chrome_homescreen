@@ -3,6 +3,8 @@ Dash Page is a Chrome extension designed to transform your new tab page into a s
 
 This project is a work in progress. My aim for this is to gain more technical experience working with front-end technologies.
 
+![Screenshot](./chrome_homescreen.webp)
+
 ## Table of Contents
 1. Key Features
 2. Technologies Used
