@@ -1,11 +1,7 @@
 # Current Status
-![Current Screenshot](./current_screenshot.png)
+![Current Screenshot](./chrome_homescreen.png)
 
 # Tasks
-## App
-**Top Priority**
-- [x] Background
-- [x] Clock and Search Widget
 
 **Medium Priority**
 - [ ] Settings Panel
@@ -22,13 +18,11 @@
       - [ ] Request an artist for default backgrounds
     - [ ] Selection of default colors
     - [ ] Have users *upload* their own background
-  - [ ] Add Settings for changing default font
+  - [x] Add Settings for changing default font
+  - [ ] Export Data as JSON File
 
 **Low Priority**
 - [ ] Side Panel
   - [x] Tasks
   - [ ] Your pet section      `WORKING ON`
   - [ ] Your day preview      `WORKING ON`
-
-## Generic
-- [ ] Reference GPL License Properly
