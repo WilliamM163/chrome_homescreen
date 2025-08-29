@@ -15,7 +15,7 @@ This project is a work in progress. My aim for this is to gain more technical ex
 ## Key Features:
 **Features I am working on** | [Todo List](./TODO.md)
 - **To-Do List:** Keep track of your tasks and assignments
-- **Exam Countdown Timer:** Stay aware of upcoming deadlines
+- **Calendar Preview:** See what you have scheduled soon
 - **Practice Exam Timer:** Practice an exam with time pressure
 - **Pet Section:** A cute virtual pet that gets animated as you complete your tasks, providing positive reinforcement
 - **Customization:** Customize the look and feel of your page, by changing the background, fonts, clock, and widget settings
