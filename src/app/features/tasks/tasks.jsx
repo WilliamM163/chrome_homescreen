@@ -7,17 +7,11 @@ import uncompleted from './assets/uncompleted.svg'
 import up from './assets/up.svg'
 import down from './assets/down.svg'
 import bin from './assets/bin.svg'
-import { saveTasks } from './tasksFunctions'
 
 function Tasks() {
     const dispatch = useDispatch()
     const tasks = useSelector((state) => state.tasks)
     const [newTaskString, setNewTaskString] = useState('')
-
-    // Save tasks when tasks are updated
-    useEffect(() => {
-        saveTasks(tasks)
-    }, [tasks])
 
     // Adding Task
     const onKeyDown = (event) => {
@@ -65,7 +59,7 @@ function Tasks() {
         return tasks.map((task, index) => {
             return (
                 <div className='task' key={task.id} >
-                    <img src={task.completed ? completed : uncompleted} class='button' onClick={() => onComplete(index)} />
+                    <img src={task.completed ? completed : uncompleted} className='button' onClick={() => onComplete(index)} />
                     <p className={task.completed ? 'completed' : null}>{task.string}</p>
                     <div style={{ flexGrow: 1 }}></div>
                     <img src={up} className='button fade' onClick={() => move(index, 'UP')} />

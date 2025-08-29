@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { useDispatch } from 'react-redux'
 
-import { getImageData, storeImage } from './changeBackgroundFunctions.js'
+import { getImageData } from './changeBackgroundFunctions.js'
 import { setBackground } from './backgroundSlice.js'
 
 import styles from './changeBackground.module.css'
@@ -20,8 +20,7 @@ function ChangeBackground() {
 
         // Reading Image Data
         const imageDataURL = await getImageData(file)
-        const success = storeImage(imageDataURL)
-        if (success) dispatch(setBackground(imageDataURL))
+        dispatch(setBackground(imageDataURL))
     }
 
     return (

@@ -6,7 +6,7 @@
 **Medium Priority**
 - [ ] Settings Panel
   - [x] Add Redux for State Management
-  - [ ] Have state changes sync across tabs
+  - [x] Have state changes sync across tabs
     - https://daverivera90.medium.com/sharing-state-between-browser-tabs-with-redux-68899eb88fb7
     - Exploring using JS Storage Listener to update state
     - Maybe use redux-pouchdb middleware
@@ -26,3 +26,4 @@
   - [x] Tasks
   - [ ] Your pet section      `WORKING ON`
   - [ ] Your day preview      `WORKING ON`
+- [ ] Add Testing

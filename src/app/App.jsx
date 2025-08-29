@@ -6,7 +6,6 @@ import Settings from './features/settings/settings'
 import OpenSettingsButton from './features/settings/openSettingsButton'
 import { useSelector } from 'react-redux'
 import Tasks from './features/tasks/tasks'
-import Pets from './features/pets/pets'
 
 
 function App() {

@@ -16,19 +16,4 @@ async function getImageData(file) {
     }
 }
 
-function storeImage(dataURL) {
-    try {
-        localStorage.setItem('background-image', dataURL)
-        return true
-    } catch (e) {
-        alert('File is exceeds localStorage quota')
-        console.error(e)
-        return false
-    }
-}
-
-function fetchImage() {
-    return localStorage.getItem('background-image')
-}
-
-export { getImageData, storeImage, fetchImage }
+export { getImageData }
